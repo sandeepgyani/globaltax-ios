@@ -3,8 +3,8 @@
 // content rights declaration, and review contact. Usage: node asc-finalize.js <ISSUER_ID>
 const crypto = require('crypto'); const fs = require('fs'); const https = require('https');
 const KEY_ID='AXSWLCWZ9K', P8='C:/Users/sande/Downloads/AuthKey_AXSWLCWZ9K.p8', ISSUER=process.argv[2];
-const APP='6797386696';
-const PRIVACY='https://www.pcssolutions.co.in/Privacy%20Policy%20%E2%80%94%20Jyotish%20Guru.html';
+const APP='6797626391';
+const PRIVACY='https://sandeepgyani.github.io/app-privacy-policies/globaltax-privacy-policy.html';
 if(!ISSUER){console.error('Pass Issuer ID');process.exit(1);}
 function jwt(){const h=Buffer.from(JSON.stringify({alg:'ES256',kid:KEY_ID,typ:'JWT'})).toString('base64url');
 const n=Math.floor(Date.now()/1000);const p=Buffer.from(JSON.stringify({iss:ISSUER,iat:n,exp:n+900,aud:'appstoreconnect-v1'})).toString('base64url');
@@ -17,8 +17,8 @@ const ok=(l,r)=>console.log(l+':', r.status<300?'OK':'ERR '+JSON.stringify(r.bod
  const infos=r.body.data||[];
  const info=infos.find(i=>['PREPARE_FOR_SUBMISSION','DEVELOPER_REJECTED','REJECTED'].includes(i.attributes.appStoreState||i.attributes.state))||infos[0];
  // 1. category EDUCATION
- r=await api('PATCH','/v1/appInfos/'+info.id,{data:{type:'appInfos',id:info.id,relationships:{primaryCategory:{data:{type:'appCategories',id:'LIFESTYLE'}}}}});
- ok('category FOOD_AND_DRINK', r);
+ r=await api('PATCH','/v1/appInfos/'+info.id,{data:{type:'appInfos',id:info.id,relationships:{primaryCategory:{data:{type:'appCategories',id:'FINANCE'}}}}});
+ ok('category FINANCE', r);
  // 2. privacy policy URL on the app-info localization
  r=await api('GET','/v1/appInfos/'+info.id+'/appInfoLocalizations?limit=20');
  for(const loc of (r.body.data||[])){
@@ -41,7 +41,7 @@ const ok=(l,r)=>console.log(l+':', r.status<300?'OK':'ERR '+JSON.stringify(r.bod
  r=await api('PATCH','/v1/apps/'+APP,{data:{type:'apps',id:APP,attributes:{contentRightsDeclaration:'DOES_NOT_USE_THIRD_PARTY_CONTENT'}}});
  ok('content rights', r);
  // 6. review contact + notes (no sign-in, fully offline)
- const attrs={contactFirstName:'Sandeep',contactLastName:'Gyani',contactPhone:'+91 9829013317',contactEmail:'sandeep@pcssolutions.co.in',demoAccountRequired:false,notes:'Vedic astrology reference app. No sign-in and no account are needed, and it works fully offline with no data collection. To test: enter any name, date of birth, time and city on the first screen and tap Generate Kundli. The tabs then show the birth chart (D1/D9/D10), Vimshottari dasha, panchang, predictions with star ratings, the Upay tab with traditional remedies, kundli matching, muhurat dates, career guidance and gemstones. The language can be switched to Hindi with the button at the top. Navigation uses the in-app Back button and the standard iOS edge-swipe. All astrological content carries a disclaimer that it is for informational and cultural purposes and is not professional advice.'};
+ const attrs={contactFirstName:'Sandeep',contactLastName:'Gyani',contactPhone:'+91 9829013317',contactEmail:'sandeep@pcssolutions.co.in',demoAccountRequired:false,notes:'Educational finance planning app. No sign-in and no account are needed; it works fully offline with no data collection. To test: on the Calculator tab pick a country, enter a salary and tap Calculate My Tax to see the estimated tax, take-home pay and star-rated government benefits. The Compare tab ranks take-home pay across 15 countries. The Retirement tab computes the corpus needed with inflation. The Migration tab shows visa routes and equivalent budgets. The Cost of Living tab opens the CostCompass explorer for 181 countries; its back arrow returns to the main app. Language can be switched between 6 languages at the top right. All estimates carry clear disclaimers that this is educational information, not tax or financial advice, with links to official government tax authorities.'};
  r=await api('GET','/v1/appStoreVersions/'+ver+'/appStoreReviewDetail');
  if(r.status===200 && r.body.data){ r=await api('PATCH','/v1/appStoreReviewDetails/'+r.body.data.id,{data:{type:'appStoreReviewDetails',id:r.body.data.id,attributes:attrs}}); }
  else { r=await api('POST','/v1/appStoreReviewDetails',{data:{type:'appStoreReviewDetails',attributes:attrs,relationships:{appStoreVersion:{data:{type:'appStoreVersions',id:ver}}}}}); }

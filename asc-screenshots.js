@@ -2,10 +2,10 @@
 // Usage: node asc-screenshots.js <ISSUER_ID>
 const crypto = require('crypto'); const fs = require('fs'); const https = require('https'); const { URL } = require('url');
 const KEY_ID='AXSWLCWZ9K', P8='C:/Users/sande/Downloads/AuthKey_AXSWLCWZ9K.p8', ISSUER=process.argv[2];
-const APP='6797386696';
+const APP='6797626391';
 const SETS = [
-  { type: 'APP_IPHONE_65', files: ['store-assets/jg-ios-ip1.jpg','store-assets/jg-ios-ip2.jpg','store-assets/jg-ios-ip3.jpg','store-assets/jg-ios-ip4.jpg'] },
-  { type: 'APP_IPAD_PRO_3GEN_129', files: ['store-assets/jg-ios-ipad1.jpg'] },
+  { type: 'APP_IPHONE_65', files: ['store-assets/ip65-1-calculator.jpg','store-assets/ip65-2-results.jpg','store-assets/ip65-3-compare.jpg','store-assets/ip65-4-retirement.jpg','store-assets/ip65-5-migration.jpg','store-assets/ip65-6-costliving.jpg'] },
+  { type: 'APP_IPAD_PRO_3GEN_129', files: ['store-assets/ipad129-1-calculator.jpg'] },
 ];
 if(!ISSUER){console.error('Pass Issuer ID');process.exit(1);}
 function jwt(){const h=Buffer.from(JSON.stringify({alg:'ES256',kid:KEY_ID,typ:'JWT'})).toString('base64url');
