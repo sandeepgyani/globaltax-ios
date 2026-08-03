@@ -1,61 +1,44 @@
-# Jyotish Guru — App Store listing (v1.1)
+# Global Tax & Cost of Living — App Store listing
 
-- **App Store name:** Jyotish Guru: Kundli (24 chars — Apple limit 30)
-- **Subtitle:** Vedic chart, dasha and upay (29 chars — Apple limit 30)
-- **Bundle ID:** in.co.pcssolutions.jyotishguru (Apple bundle resource `VFT3Z34PJR`)
-- **SKU:** jyotishguru-001
-- **Primary language:** English (UK)
-- **Category:** Lifestyle (secondary: Reference)
+- **Name (30):** Global Tax & Cost of Living
+- **Subtitle (30):** Tax, living costs & migration
+- **Category:** Finance (secondary: Utilities)
 - **Price:** Free
-- **Privacy policy:** https://www.pcssolutions.co.in/Privacy%20Policy%20%E2%80%94%20Jyotish%20Guru.html
-- **Age rating:** all questions "None" → 4+
-- **Provisioning profile:** `jyotishguru appstore profile` (79ea3b0b-8f49-48af-92e0-52c7438ca194)
+- **Privacy policy:** https://sandeepgyani.github.io/app-privacy-policies/globaltax-privacy-policy.html
+- **Age rating:** all questions "None" → 4+ (answer the new socialMedia fields No — see astrology-ios lesson)
+- **Provisioning profile:** `globaltax appstore profile` (56b16f0e-5435-4bef-a9d0-71986fa009d7)
 
 ## Promotional text (170 max)
-Now with a complete Upay section: for every dosha or weakness found in your chart you get the mantra, the daan, the puja, the gemstone and one practical step. Hindi included.
+Now one app for the big money questions: what will I pay in tax, what does life cost there, how much do I need to retire, and what does it take to move abroad?
 
 ## Description
-Jyotish Guru is a complete Vedic astrology toolkit that works entirely on your iPhone or iPad. No internet, no sign-in, no data collection — every calculation happens on your own device.
+Planning a move abroad? Comparing job offers? Wondering how much you need in the bank to retire? Global Tax & Cost of Living combines four planners in one fully offline app.
 
-BIRTH CHART (KUNDLI)
-Enter name, date, time and place of birth and the app draws your Lagna chart (D1), Navamsa (D9) and Dashamsha (D10) in the traditional North-Indian style. All nine grahas are shown with sign, degree, house, nakshatra, pada, retrograde state and dignity, computed astronomically using the Lahiri (Chitrapaksha) ayanamsa.
+TAX CALCULATOR — Estimate personal income tax in 15 countries (India, USA, UK, Canada, Australia, Germany, France, Japan, Singapore, Hong Kong, Hungary, Romania, Bulgaria, UAE, Bahamas). Enter salary, investments, rental income, capital gains and family details; see income tax, social security, take-home pay, effective and marginal rates. India automatically compares the Old and New regimes.
 
-DASHA AND DOSHA
-Your full Vimshottari Mahadasha timeline with Antardashas, plus clear analysis of Manglik, Kaal Sarp and Sade Sati, and classical yogas such as Gajakesari, Budha-Aditya, Neech Bhang and Raj Yoga.
+COMPARE COUNTRIES — One tap shows your take-home pay in all 15 countries, sorted best first.
 
-UPAY — CORRECTIONS, NOT JUST DIAGNOSIS
-This is the heart of the app. Every weakness found in your chart is listed with its traditional correction: the mantra with its count, the daan with its weekday, the puja or vrat, the gemstone with an honest caution, and — most importantly — one practical step you can actually take. Each finding is marked as needing attention, moderate or mild, so nothing is alarming.
+COST OF LIVING (CostCompass) — Rank 181 countries and 2,100+ cities by cost of living, rent, safety, healthcare and happiness. Build a personal monthly budget, run what-if scenarios and export a PDF report.
 
-PREDICTIONS
-Daily, weekly, monthly and yearly outlooks drawn from your own chart, with star ratings for career, money, health, relationships, business, travel and education, based on current transits and your running dasha. Lucky colour, lucky number and a remedy for each period.
+RETIREMENT PLANNER — Set your age, expenses and inflation (7% default) to see the corpus you need on retirement day, the lump sum needed in the bank today, or the monthly investment that gets you there.
 
-KUNDLI MATCHING
-Full Ashtakoota guna milan out of 36 with all eight kootas explained, and Nadi and Bhakoot dosha alerts.
+MIGRATION PLANNER — Pick a destination: see the main visa routes, the budget needed to keep your standard of living, and the gross salary that covers it after local taxes.
 
-PANCHANG AND MUHURAT
-Today's tithi, vara, nakshatra, yoga and karana, plus an auspicious-date finder for property purchase, vehicle purchase, a new business, griha pravesh, engagement and starting education.
+WHAT YOUR TAXES FUND — Star-rated government benefits per country: roads, safety, healthcare, education, employment support, pensions and housing.
 
-GUIDANCE
-Career suitability from your 10th house and strongest planet, business timing, child education and health indications, gemstone recommendations, and an AI prompt builder that copies your full chart data for use with any AI assistant.
+WHERE TO INVEST — Long-term and short-term tax-saving ideas per country: PPF, ELSS and NPS in India; 401(k), ISA, super, CPF and more elsewhere.
 
-HINDI
-The whole app switches to Hindi with one tap, including every mantra and remedy.
+6 LANGUAGES — English, Hindi, French, Spanish, German and Chinese.
 
-PRIVATE BY DESIGN
-Your birth details never leave your device. Nothing is uploaded, stored on a server or shared with anyone.
+PRIVATE BY DESIGN — Works completely offline. No account, no ads, no analytics; nothing you type leaves your device.
 
-DISCLAIMER
-Astrological content is provided for informational and cultural purposes and is not professional, medical, legal or financial advice. For important life decisions, please also consult a qualified astrologer.
+Estimates are simplified and educational — not tax, legal or financial advice. PCS Solutions is not affiliated with any government. Verify with official tax authorities (incometax.gov.in, irs.gov, gov.uk, canada.ca, ato.gov.au and others listed in-app) or a qualified adviser before making decisions.
 
-## Keywords (100 max)
-kundli,vedic,astrology,horoscope,dasha,panchang,rashi,nakshatra,muhurat,upay,jyotish,hindi,offline
+## Keywords (100)
+tax,calculator,cost of living,retirement,migration,expat,salary,take home,NRI,visa,compare,planner
 
-## What's New in 1.1
-A complete Upay section giving the mantra, daan, puja, gemstone and a practical step for every dosha or weakness found in your chart; a full Hindi language option; a Back button; and a brighter, more colourful design.
+## Support URL
+https://pcssolutions.co.in
 
 ## Review notes
-The app is fully offline and needs no sign-in — open it, enter any birth date, time and city, and tap Generate Kundli to see every feature. The Upay tab lists remedies for whatever the chart shows. Language can be switched to Hindi from the button at the top. Navigation uses the in-app Back button and the standard iOS edge-swipe.
-
-## Screenshots (in store-assets/)
-- iPhone 6.7" 1284x2778: jg-ios-ip1 (birth form + chart), ip2 (D1/D9/D10 charts), ip3 (predictions with star ratings), ip4 (Upay remedies)
-- iPad 12.9" 2048x2732: jg-ios-ipad1
+Fully offline informational app. No sign-in. All features available immediately. Educational estimates only with clear disclaimers and official government source links.
