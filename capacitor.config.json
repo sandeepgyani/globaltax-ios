@@ -1,0 +1,9 @@
+{
+  "appId": "in.co.pcssolutions.globaltax",
+  "appName": "Global Tax",
+  "webDir": "www",
+  "ios": {
+    "contentInset": "never",
+    "backgroundColor": "#0f1b2d"
+  }
+}
