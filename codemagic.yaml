@@ -12,10 +12,8 @@ workflows:
       app_store_connect: PCS_ASC_KEY
     environment:
       ios_signing:
-        certificates:
-          - pcs_distribution
-        provisioning_profiles:
-          - globaltax_appstore_profile
+        distribution_type: app_store
+        bundle_identifier: in.co.pcssolutions.globaltax
       node: latest
       xcode: latest
     scripts:
