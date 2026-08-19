@@ -12,10 +12,14 @@ workflows:
       app_store_connect: PCS_ASC_KEY
     environment:
       ios_signing:
-        distribution_type: app_store
-        bundle_identifier: in.co.pcssolutions.globaltax
+        certificates:
+          - pcs_distribution
+        provisioning_profiles:
+          - globaltax_appstore_profile
       node: latest
       xcode: latest
+      vars:
+        APP_STORE_APPLE_ID: 6797626391
     scripts:
       - name: Install npm dependencies
         script: npm install
@@ -25,6 +29,12 @@ workflows:
           npx cap sync ios
       - name: Set up code signing
         script: xcode-project use-profiles
+      - name: Bump build number
+        script: |
+          LATEST_BUILD_NUMBER=$(app-store-connect get-latest-app-store-build-number "$APP_STORE_APPLE_ID" 2>/dev/null || echo 0)
+          NEXT_BUILD_NUMBER=$((LATEST_BUILD_NUMBER + 1))
+          echo "Bumping CFBundleVersion to $NEXT_BUILD_NUMBER (latest on ASC: $LATEST_BUILD_NUMBER)"
+          cd ios/App && agvtool new-version -all $NEXT_BUILD_NUMBER
       - name: Build signed IPA
         script: |
           xcode-project build-ipa \
